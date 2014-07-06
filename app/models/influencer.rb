@@ -21,24 +21,10 @@ class Influencer < ActiveRecord::Base
 
 	def save_channels
 		usernames.each do |user|
-			Influencer.create(user:user)
+			Influencer.create(user:user,
+												url:"https://www.youtube.com/user/#{user}",
+												api:"http://gdata.youtube.com/feeds/api/users/#{user}")
 		end
 	end
-
-	def urls
-		@urls ||= []
-	end
-
-	def create_urls
-		usernames.each do |username|
-			urls << "https://www.youtube.com/user/#{username}"
-		end
-	end
-
-	def save_urls
-		urls.each do |url|
-			Influencer.create(url:url)
-		end
-	end 
 
 end

@@ -33,6 +33,8 @@ end
 
 gem 'nokogiri'
 
+gem 'crack'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

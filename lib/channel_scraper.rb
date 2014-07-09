@@ -16,3 +16,9 @@ def scrape_channels
 	end
 	channels.reject!{|channel| channel.empty? }
 end
+
+def save_channels
+	channels.each do |channel|
+		Influencer.create(username: channel)
+	end
+end

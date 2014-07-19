@@ -1,6 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-
 def channels 
 	@channels ||= []
 end
